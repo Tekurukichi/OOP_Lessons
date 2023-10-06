@@ -7,7 +7,7 @@ namespace Lab1_03
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public string Pos { get; set; }
+        public string Wrksp { get; set; }
         public int Experience { get; set; }
         
         public  Employee(string name, string surname)

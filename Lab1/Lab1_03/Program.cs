@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 
+
 namespace Lab1_03
 {
     class Program
@@ -13,16 +14,17 @@ namespace Lab1_03
 
             Console.WriteLine("Enter the employee's name:");
             string name = Console.ReadLine();
+           
 
             Console.WriteLine("Enter the employee's wrksp:");
             string wrksp = Console.ReadLine();
 
             Console.WriteLine("Enter the employee's years of experience:");
-            int experience = int.Parse(Console.ReadLine());
+            int experience = Convert.ToInt32(Console.ReadLine());
 
             Employee employee = new Employee(name,  surname);
             {
-                employee.Pos = wrksp;
+                employee.Wrksp = wrksp;
                 employee.Experience = experience;
             };
 
@@ -32,7 +34,7 @@ namespace Lab1_03
             Console.WriteLine("Employee Information:");
             Console.WriteLine($"Last Name: {employee.Name}");
             Console.WriteLine($"First Name: {employee.Surname}");
-            Console.WriteLine($"wrksp: {employee.Pos}");
+            Console.WriteLine($"wrksp: {employee.Wrksp}");
             Console.WriteLine($"Salary: {salary:C2}");
             Console.WriteLine($"Tax: {tax:C2}");
 
