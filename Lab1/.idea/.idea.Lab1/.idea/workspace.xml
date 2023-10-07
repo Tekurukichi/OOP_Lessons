@@ -10,17 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c308814a-bff8-4be8-a0f8-60e6103f9a0a" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+    <list default="true" id="c308814a-bff8-4be8-a0f8-60e6103f9a0a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Lab2/Lab2_01/Lab2_01.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2/Lab2_01/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/bin/Debug/net5.0/Lab1_04.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/bin/Debug/net5.0/Lab1_04.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/bin/Debug/net5.0/Lab1_04.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/bin/Debug/net5.0/Lab1_04.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/bin/Debug/net5.0/ref/Lab1_04.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/bin/Debug/net5.0/ref/Lab1_04.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/ref/Lab1_04.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/ref/Lab1_04.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +188,8 @@
       <updated>1696613021668</updated>
       <workItem from="1696613023838" duration="6700000" />
       <workItem from="1696657950071" duration="16933000" />
-      <workItem from="1696707684489" duration="3809000" />
+      <workItem from="1696707684489" duration="4175000" />
+      <workItem from="1696767413959" duration="758000" />
     </task>
     <task id="LOCAL-00001" summary="Delete README.md">
       <option name="closed" value="true" />
@@ -228,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696713180457</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1696715365361</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696715365361</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
