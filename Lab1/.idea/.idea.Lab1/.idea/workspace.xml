@@ -10,12 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c308814a-bff8-4be8-a0f8-60e6103f9a0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Lab2/Lab2_01/Lab2_01.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2/Lab2_01/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_04/obj/Debug/net5.0/Lab1_04.csproj.AssemblyReference.cache" afterDir="false" />
-    </list>
+    <list default="true" id="c308814a-bff8-4be8-a0f8-60e6103f9a0a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
