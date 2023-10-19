@@ -4,44 +4,55 @@ namespace Lab1_02
 {
     public class Converter
     {
-        private double usdRate;
-        private double eurRate;
-        private double plnRate;
+
+        private double _usd;
+        private double _eur;
+        private double _pln;
+
         public Converter(double usd, double eur, double pln)
         {
-            this.usdRate = usd;
-            this.eurRate = eur;
-            this.plnRate = pln;
+            _usd = usd;
+            _eur = eur;
+            _pln = pln;
         }
 
-        public double ConvertToUSD(double amountInUah)
+        public double ToUSD(double uah) => uah / _usd;
+        public double FromUSD(double usd) => usd * _usd;
+
+        public double ToEUR(double uah) => uah / _eur;
+        public double FromEUR(double eur) => eur * _eur;
+
+        public double ToPLN(double uah) => uah / _pln;
+        public double FromPLN(double pln) => pln * _pln;
+
+        public static double GetDoubleInput(string prompt)
         {
-            return amountInUah / usdRate;
+
+            Console.WriteLine(prompt);
+
+            if (!double.TryParse(Console.ReadLine(), out double result))
+            {
+
+                Console.WriteLine("Please, input correct value in double/float format");
+                return GetDoubleInput(prompt);
+            }
+
+            return result;
         }
 
-        public double ConvertToEUR(double amountInUah)
+        public static int GetIntInput(string prompt, int min, int max)
         {
-            return amountInUah / eurRate;
-        }
 
-        public double ConvertToPLN(double amountInUah)
-        {
-            return amountInUah / plnRate;
-        }
+            Console.WriteLine(prompt);
 
-        public double ConvertFromUSD(double amountInUsd)
-        {
-            return amountInUsd * usdRate;
-        }
+            if (!int.TryParse(Console.ReadLine(), out int result) || result < min || result > max)
+            {
 
-        public double ConvertFromEUR(double amountInEur)
-        {
-            return amountInEur * eurRate;
-        }
+                Console.WriteLine($"Please, input correct value in range from {min} to {max} .");
+                return GetIntInput(prompt, min, max);
+            }
 
-        public double ConvertFromPLN(double amountInPln)
-        {
-            return amountInPln * plnRate;
-        }
+            return result;
         }
     }
+}

@@ -6,15 +6,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Address MyAddress = new Address();
-            MyAddress.index = "0524695";
-            MyAddress.country = "Ukraine";
-            MyAddress.city = "Kyiv";
-            MyAddress.street = "Obl Prosp";
-            MyAddress.house = "12a";
-            MyAddress.apartment = "34";
-            Console.WriteLine($"Адреса: {MyAddress.country}, {MyAddress.street}, {MyAddress.city}," +
-                              $"{MyAddress.house}, {MyAddress.apartment}, {MyAddress.index}");
+            Address address = new Address()
+            {
+                Index = "0524695",
+                Country = "Ukraine",
+                City = "Kyiv",
+                Street = "Obl Prosp",
+                House = "12a",
+                Apartment = "34",
+            };
+            Console.WriteLine($"Адреса: {address.Country}, {address.Street}, {address.City}," +
+                              $"{address.House}, {address.Apartment}, {address.Index}");
 
 
             
