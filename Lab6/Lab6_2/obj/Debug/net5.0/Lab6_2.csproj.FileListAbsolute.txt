@@ -1,0 +1,16 @@
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\bin\Debug\net5.0\Lab6_2.exe
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\bin\Debug\net5.0\Lab6_2.deps.json
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\bin\Debug\net5.0\Lab6_2.runtimeconfig.json
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\bin\Debug\net5.0\Lab6_2.runtimeconfig.dev.json
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\bin\Debug\net5.0\Lab6_2.dll
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\bin\Debug\net5.0\ref\Lab6_2.dll
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\bin\Debug\net5.0\Lab6_2.pdb
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.csproj.AssemblyReference.cache
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.AssemblyInfoInputs.cache
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.AssemblyInfo.cs
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.csproj.CoreCompileInputs.cache
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.dll
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\ref\Lab6_2.dll
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.pdb
+C:\Users\nudga\RiderProjects\Lab6\Lab6_2\obj\Debug\net5.0\Lab6_2.genruntimeconfig.cache
