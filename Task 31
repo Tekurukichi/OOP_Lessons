@@ -1,0 +1,85 @@
+using System;
+
+public class Product
+{
+    // Статичне поле для відстеження кількості продуктів
+    public static int ProductCount { get; private set; } = 0;
+
+    // Конструктор класу Product
+    public Product(string name, double price)
+    {
+        Name = name;
+        Price = price;
+        // Збільшення лічильника при створенні нового продукту
+        ProductCount++;
+    }
+
+    // Властивості Name та Price
+    public string Name { get; set; }
+    public double Price { get; set; }
+
+    // Метод для виведення інформації про продукт
+    public virtual void DisplayInfo()
+    {
+        Console.WriteLine($"Назва: {Name}");
+        Console.WriteLine($"Ціна: {Price:C}");
+    }
+}
+
+// Клас ElectronicProduct, що успадковується від Product
+public class ElectronicProduct : Product
+{
+    // Конструктор класу ElectronicProduct
+    public ElectronicProduct(string name, double price, int warrantyPeriod) : base(name, price)
+    {
+        WarrantyPeriod = warrantyPeriod;
+    }
+
+    // Властивість WarrantyPeriod
+    public int WarrantyPeriod { get; set; }
+
+    // Перевизначення методу DisplayInfo
+    public override void DisplayInfo()
+    {
+        base.DisplayInfo(); // Виклик базового методу
+        Console.WriteLine($"Гарантія: {WarrantyPeriod} місяців");
+    }
+}
+
+// Клас ClothingProduct, що успадковується від Product
+public class ClothingProduct : Product
+{
+    // Конструктор класу ClothingProduct
+    public ClothingProduct(string name, double price, string size) : base(name, price)
+    {
+        Size = size;
+    }
+
+    // Властивість Size
+    public string Size { get; set; }
+
+    // Перевизначення методу DisplayInfo
+    public override void DisplayInfo()
+    {
+        base.DisplayInfo(); // Виклик базового методу
+        Console.WriteLine($"Розмір: {Size}");
+    }
+}
+
+// Клас Program для тестування
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Створення об'єктів продуктів
+        ElectronicProduct laptop = new ElectronicProduct("Ноутбук", 1000, 12);
+        ClothingProduct tshirt = new ClothingProduct("Футболка", 20, "L");
+
+        // Виведення інформації про продукти
+        laptop.DisplayInfo();
+        Console.WriteLine($"Кількість створених продуктів: {Product.ProductCount}");
+        Console.WriteLine();
+        tshirt.DisplayInfo();
+        Console.WriteLine($"Кількість створених продуктів: {Product.ProductCount}");
+    }
+}
