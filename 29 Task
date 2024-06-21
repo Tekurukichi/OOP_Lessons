@@ -1,0 +1,116 @@
+using System;
+using System.Collections.Generic;
+
+// Інтерфейс IDrawable
+public interface IDrawable
+{
+    void Draw();
+}
+
+// Базовий клас Shape
+public abstract class Shape
+{
+    public abstract double CalculateArea();
+}
+
+// Клас Circle, що наслідує Shape та реалізує IDrawable
+public class Circle : Shape, IDrawable
+{
+    public double Radius { get; set; }
+
+    public Circle(double radius)
+    {
+        Radius = radius;
+    }
+
+    public override double CalculateArea()
+    {
+        return Math.PI * Radius * Radius;
+    }
+
+    public void Draw()
+    {
+        Console.WriteLine("  ***  ");
+        Console.WriteLine(" *   * ");
+        Console.WriteLine("*     *");
+        Console.WriteLine(" *   * ");
+        Console.WriteLine("  ***  ");
+    }
+}
+
+// Клас Square, що наслідує Shape та реалізує IDrawable
+public class Square : Shape, IDrawable
+{
+    public double Side { get; set; }
+
+    public Square(double side)
+    {
+        Side = side;
+    }
+
+    public override double CalculateArea()
+    {
+        return Side * Side;
+    }
+
+    public void Draw()
+    {
+        Console.WriteLine("*****");
+        Console.WriteLine("*   *");
+        Console.WriteLine("*   *");
+        Console.WriteLine("*   *");
+        Console.WriteLine("*****");
+    }
+}
+
+// Клас Triangle, що наслідує Shape та реалізує IDrawable
+public class Triangle : Shape, IDrawable
+{
+    public double Base { get; set; }
+    public double Height { get; set; }
+
+    public Triangle(double baseLength, double height)
+    {
+        Base = baseLength;
+        Height = height;
+    }
+
+    public override double CalculateArea()
+    {
+        return 0.5 * Base * Height;
+    }
+
+    public void Draw()
+    {
+        Console.WriteLine("  *  ");
+        Console.WriteLine(" * * ");
+        Console.WriteLine("*   *");
+        Console.WriteLine("*****");
+    }
+}
+
+// Головний клас програми
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Створення списку фігур
+        List<Shape> shapes = new List<Shape>
+        {
+            new Circle(5),
+            new Square(4),
+            new Triangle(6, 8)
+        };
+
+        // Обчислення площі та виклик методу draw() для кожної фігури
+        foreach (Shape shape in shapes)
+        {
+            Console.WriteLine($"{shape.GetType().Name} area: {shape.CalculateArea()}");
+            if (shape is IDrawable drawableShape)
+            {
+                drawableShape.Draw();
+            }
+            Console.WriteLine();
+        }
+    }
+}
