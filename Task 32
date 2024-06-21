@@ -1,0 +1,78 @@
+using System;
+
+// Абстрактний клас Document
+public abstract class Document
+{
+    public abstract void Print();
+
+    public void PrepareForPrinting()
+    {
+        Console.WriteLine("Підготовка документу до друку...");
+        Print();
+    }
+}
+
+// Клас PDFDocument, що наслідує Document
+public class PDFDocument : Document
+{
+    public override void Print()
+    {
+        Console.WriteLine("Друк PDF документа");
+    }
+}
+
+// Клас WordDocument, що наслідує Document
+public class WordDocument : Document
+{
+    public override void Print()
+    {
+        Console.WriteLine("Друк Word документа");
+    }
+}
+
+// Клас ExcelDocument, що наслідує Document
+public class ExcelDocument : Document
+{
+    public override void Print()
+    {
+        Console.WriteLine("Друк Excel документа");
+    }
+}
+
+// Фабрика для створення документів
+public static class DocumentFactory
+{
+    public static Document CreateDocument(string type)
+    {
+        switch (type.ToLower())
+        {
+            case "pdf":
+                return new PDFDocument();
+            case "word":
+                return new WordDocument();
+            case "excel":
+                return new ExcelDocument();
+            default:
+                throw new ArgumentException("Невідомий тип документа");
+        }
+    }
+}
+
+// Клас Program для тестування
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Створення документів за допомогою фабрики
+        Document pdfDoc = DocumentFactory.CreateDocument("pdf");
+        Document wordDoc = DocumentFactory.CreateDocument("word");
+        Document excelDoc = DocumentFactory.CreateDocument("excel");
+
+        // Підготовка документів до друку та друк
+        pdfDoc.PrepareForPrinting();
+        Console.WriteLine();
+        wordDoc.PrepareForPrinting();
+        Console.WriteLine();
+        excelDoc.PrepareForPrinting();
+    }
+}
