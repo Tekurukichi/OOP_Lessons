@@ -1,0 +1,77 @@
+import logging
+
+class Logger:
+    """
+    Клас Logger, що реалізує патерн Singleton для логування.
+    """
+
+    __instance = None
+
+    @staticmethod
+    def get_instance():
+        """
+        Отримання єдиного екземпляра класу Logger.
+        """
+        if Logger.__instance is None:
+            Logger.__instance = Logger()
+        return Logger.__instance
+
+    def __init__(self):
+        """
+        Ініціалізація логера.
+        """
+        logging.basicConfig(filename='transactions.log', level=logging.INFO)
+
+    def log_transaction(self, message):
+        """
+        Логування транзакції.
+        """
+        logging.info(message)
+
+class BankAccount:
+    """
+    Клас BankAccount для представлення банківського рахунку.
+    """
+
+    def __init__(self, account_number, balance=0):
+        """
+        Ініціалізація рахунку.
+        """
+        self.account_number = account_number
+        self.balance = balance
+        self.logger = Logger.get_instance()
+
+    def deposit(self, amount):
+        """
+        Здійснення депозиту.
+        """
+        if amount > 0:
+            self.balance += amount
+            self.logger.log_transaction(
+                f"Депозит на рахунок {self.account_number}: +{amount}$. Баланс: {self.balance}$"
+            )
+
+    def withdraw(self, amount):
+        """
+        Зняття коштів.
+        """
+        if amount > self.balance:
+            self.logger.log_transaction(
+                f"Помилка зняття з рахунку {self.account_number}: недостатньо коштів. Запитана сума: {amount}$, баланс: {self.balance}$"
+            )
+            raise ValueError("Недостатньо коштів на рахунку")
+        else:
+            self.balance -= amount
+            self.logger.log_transaction(
+                f"Зняття з рахунку {self.account_number}: -{amount}$. Баланс: {self.balance}$"
+            )
+
+# Приклад використання:
+if __name__ == "__main__":
+    account = BankAccount("1234567890", 1000)
+    account.deposit(500)
+    try:
+        account.withdraw(2000)
+    except ValueError as e:
+        print(e)
+    account.withdraw(500)
